@@ -1,0 +1,673 @@
+/* 
+.kitchen-details-root {
+  background-color: #F2EBE9; 
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+.details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+.hero-section {
+  display: flex;
+  background: #E6D8D6 !important; 
+  border-radius: 24px !important;
+  padding: 30px;
+  gap: 30px;
+}
+
+.hero-img-box img {
+  width: 400px;
+  height: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.rating-badge {
+  background: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delivery-time-pill {
+  background-color: #5D1A1A !important; 
+  border-radius: 50px !important;
+  margin-top: 15px !important;
+  text-transform: none !important;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.category-img-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+.food-item-card {
+  background: #EBE0DE !important;
+  padding: 12px;
+  border-radius: 16px !important;
+}
+
+.item-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.item-img-wrapper img { width: 100%; height: 160px; object-fit: cover; }
+
+.discount-tag {
+  position: absolute;
+  top: 0; left: 0;
+  background: #B22222;
+  color: white;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-bottom-right-radius: 10px;
+}
+
+.item-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.add-btn {
+  background-color: #5D1A1A !important;
+  text-transform: none !important;
+}
+
+
+.sticky-cart-container {
+  position: fixed;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cart-pill {
+  background-color: #5D1A1A;
+  color: white;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.section-label {
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  border-bottom: 2px solid #5D1A1A;
+  display: inline-block;
+}
+
+
+
+ */
+
+/* 
+
+
+
+
+
+
+
+
+/* Page Setup */
+.kitchen-details-page.homemakers-page {
+  min-height: 100vh;
+  padding: 20px 40px;
+}
+
+/* Back Button */
+.back-btn-simple {
+  transition: transform 0.2s;
+}
+.back-btn-simple:hover {
+  transform: translateX(-3px);
+}
+
+/* THE UNIFIED BLOCK (The continuous background) */
+.kitchen-unified-block {
+  background: #efe9e9;
+
+  border-radius: 5px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section Styling */
+.hero-content-split {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 25px;
+}
+
+.kitchen-image-large {
+  flex: 0 0 400px;
+}
+
+.kitchen-image-large img {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.kitchen-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.kitchen-header h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 15px 0 0;
+  color: #000;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.status-label {
+  margin-left: auto; /* Pushes Open Now to the right */
+  background: white;
+  color: #27ae60;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.kitchen-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.delivery-badge {
+  background: #5c1a1a;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+/* --- STATIC KITCHEN GALLERY --- */
+.kitchen-gallery-section {
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+.gallery-header-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #5d1a1a; /* Matches your theme header */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #5d1a1a;
+  display: inline-block;
+}
+
+.gallery-scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.gallery-card-static {
+  flex: 0 0 180px; /* Fixed width as seen in image_7ae237 */
+  height: 200px; /* Square aspect ratio */
+  position: relative;
+  border-radius: 12px; /* Matches rounded look in image_bf32ac */
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.gallery-card-static img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the square */
+  display: block;
+}
+
+/* Quantity Selector Styling */
+.quantity-selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #5d1a1a; /* Theme color */
+  border-radius: 6px;
+  width: 85px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.quantity-selector-container button {
+  background: none;
+  border: none;
+  color: white;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.quantity-selector-container span {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Floating Bar Styling */
+.view-cart-floating-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  background: #5d1a1a;
+  /*#2e7d32; */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+}
+
+.cart-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-count {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.cart-total {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cart-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* --- SUGGESTED ITEMS SECTION --- */
+.suggested-section {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.suggested-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.suggested-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #5d1a1a;
+  border-bottom: 3px solid #5d1a1a;
+  padding-bottom: 4px;
+}
+
+.offers-badge-btn {
+  border: 1.5px solid #27ae60;
+  background: white;
+  color: #27ae60;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.suggested-grid-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.suggested-grid-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* THE CARD STYLE */
+.suggested-item-card {
+  background: #e1d5d5; /* Updated background color */
+  flex: 0 0 230px;
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER DISCOUNT BADGE */
+.hover-discount-tag {
+  position: absolute;
+  top: 10px;
+  right: 0; /* Aligned to right */
+  background: #5d1a1a;
+  color: #ffca28;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px 0 0 4px; /* Rounded on the inner side */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.suggested-item-card:hover .hover-discount-tag {
+  opacity: 1;
+}
+
+.suggested-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image-box {
+  width: 100%;
+  height: 130px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px 0;
+  color: #000;
+}
+
+.eta-text {
+  color: #27ae60;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.customer-count {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 10px;
+}
+
+.current-price {
+  font-weight: 800;
+  font-size: 18px;
+  color: #000;
+}
+
+.slashed-price {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 4px;
+}
+
+.add-btn-main {
+  background: #5d1a1a;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* View All Style */
+.view-all-box {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.blue-view-all-btn {
+  color: #0056b3;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Fixed Floating Button */
+.floating-menu-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Modal Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.menu-modal {
+  background: white;
+  width: 90%;
+  max-width: 550px;
+  padding: 25px;
+  border-radius: 18px;
+  animation: popUp 0.3s ease-out;
+}
+
+/* Category Switcher Tabs */
+.menu-categories {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+
+.menu-categories span {
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.menu-categories .active-cat {
+  color: #5d1a1a;
+  border-bottom: 3px solid #ffcc00; /* Yellow line from image */
+}
+
+/* Two-Column Switchable List */
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+}
+
+.menu-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.m-name {
+  color: #333;
+  font-weight: 500;
+}
+.m-price {
+  color: #5d1a1a;
+  font-weight: 700;
+}
+
+.close-menu-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+/* Container at the end of the scroll */
+.view-all-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px; /* Gives space so it's not cramped at the edge */
+  min-width: 150px; /* Ensures the box has enough width to be visible */
+}
+
+/* Professional Blue Link Style */
+.blue-view-all-btn {
+  color: #0056b3; /* Professional link blue */
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 18px; /* Adjusted from 24px for better fit */
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.blue-view-all-btn:hover {
+  color: #003d80; /* Darker blue on hover */
+}
+
+
+/* Container for when items move to new rows */
+.suggested-grid-wrap {
+    display: flex;
+    flex-wrap: wrap;       /* Allows items to go to the next row */
+    gap: 20px;             /* Keeps your original spacing */
+    justify-content: flex-start;
+}
+
+/* THE FIX: Add this to your existing suggested-item-card class */
+.suggested-item-card {
+    flex: 0 0 230px;       /* Replace 250px with YOUR original card width */
+    width: 180px;          /* Lock the width so they don't grow or shrink */
+    /* DO NOT change your background-color or padding here */
+}
+
+/* This ensures images stay the same height inside the locked cards */
+.product-image-box {
+    width: 100%;
+    height: 150px;         /* Match this to your original image box height */
+}
